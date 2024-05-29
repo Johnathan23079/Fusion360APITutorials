@@ -1,5 +1,5 @@
-#Author-
-#Description-
+#Author-Johnathan Lee
+#Description-Here we will learn how to take user input and place it inside a variable, we will also look at how to use the units manager to ensure different values other then cm can be used
 
 import adsk.core, adsk.fusion, adsk.cam, traceback
 
