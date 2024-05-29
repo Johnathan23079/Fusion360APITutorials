@@ -14,11 +14,11 @@ def run(context):
     ui = None
     try:
         app = adsk.core.Application.get() #grab application 
-        ui  = app.userInterface
-        design = adsk.fusion.Design.cast(app.activeProduct)
-        retParam = design.userParameters.itemByName('Length')
+        ui  = app.userInterface #start user interface
+        design = adsk.fusion.Design.cast(app.activeProduct) #create a design variable that is assigned to the active product which is the file you are currently working in
+        retParam = design.userParameters.itemByName('Length') #use the userParameters.itemByName to find the parameter called Length and place this parameter in retparam
 
-        ui.messageBox(retParam.expression)
+        ui.messageBox(retParam.expression)# call the parameter and return the expression it can be replaced with name, unit, value and comment as well
 
     except:
         if ui:
